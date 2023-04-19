@@ -3,6 +3,7 @@ body
 {
         background-color: rgb(253, 242, 225);
         font-family:"Roboto", Sans-serif;
+        font-size: 12px;
         margin: 0;
         align-items: end;
 }     
@@ -14,46 +15,62 @@ body
                 padding: 30px;
                 display: flex;
                 flex-direction: column;
+                position: relative;
                 justify-content: space-between;
+
         }
+        .nave{
+                
+                height: 120px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                
+                flex-grow: 10;
+        }
+        .nav{
+                display:flex;
+                align-items: end;
+                
+         }
                 #cabecera{
                         align-items: center;
                         display: flex;
                         height: 50px;
                         justify-content: space-between;
-                }
 
-                #regist{
-                        font-family: sans-serif;
-                        color:black;
-                        padding: 14px 20px;
-                        text-decoration: none;
                 }
-                ul{
+                #navegador{
                         
                         display: flex;
                         justify-content: center;
-                        flex-wrap: wrap;
                         padding: 0px 0px;
                         margin: 0px;
+                        position: relative;
                 }
-                #navegador li{
+                #navegador div{
                         background-color: rgb(250, 232, 232);
                         line-height: 40px;
-                        display:block;
                         font-size: 150%;
                         padding: 0px 20px;
+                        margin-top: 20px;
+                        
+                }
+                #regist{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
                 }
                 #regist a{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                        
                         font-size: 100%;
                         padding: 0px 5px;
                         text-decoration: none;
+                        
                 }
         main{
                 background-color:white ;
+                display: block;
         }
 
         section{
@@ -87,5 +104,26 @@ img{
                 padding: 0px 0px;
         }
 
-
+        @media only screen and (max-width: 930px) {
+                .nav div {
+                        flex-direction: column;
+                }
+                #navegador div{
+                        margin: 0% 0%;
+                        height: 100%;
+                        font-size: 90%;
+                        
+                }
+                .nave{
+                  justify-content: start;
+                  flex-wrap: wrap;
+                       
+                }
+                #regist{
+                        font-size: 80%;
+                }
+                .logo{
+                        width: 280px;
+                }
+              }
 
