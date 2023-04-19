@@ -87,15 +87,19 @@ a{
 }        
 
 img{
-        
-        width: 100%;
+        width: 190%;
         margin-top: 50px;
  }
- 
+        .espacioLogo{
+                
+                width: 390px;
+                height: 125px;
+                margin: 0px 0px;
+        }
         .logo{
                 display: flex;
-                width: 100%;
-                padding: 0px 0px;
+                width: 370px;
+                margin: 15px;
         }
         .flex-container img{
                 background-color:black;
@@ -106,7 +110,13 @@ img{
 
         @media only screen and (max-width: 930px) {
                 .nav div {
+                        
                         flex-direction: column;
+                }
+                .nav{
+                        width: 210px;
+                        height: 150px;
+                        margin-top: -30px;
                 }
                 #navegador div{
                         margin: 0% 0%;
@@ -115,15 +125,24 @@ img{
                         
                 }
                 .nave{
-                  justify-content: start;
+                  justify-content: center;
                   flex-wrap: wrap;
                        
                 }
                 #regist{
-                        font-size: 80%;
+                        font-size: 80%; 
+                        display: flex;
+                        justify-content: flex-end;
+                }
+                .espacioLogo{
+                        width: 330px;
+                        margin-top: 10%;
+                        display: flex;
+                        align-items: flex-end;
                 }
                 .logo{
-                        width: 280px;
+                        margin: 0px 0px;
+                        width: 100%;
                 }
               }
 
