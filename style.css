@@ -133,6 +133,22 @@ body
      ul {
         list-style: none;
      }
+     /*contacto*/
+     .f-contactoInfo{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50%;
+        align-items: right;
+        justify-content: space-around;
+        border-right: 2px solid rgb(173, 75, 88);
+    }
+    .f-contactoLink{
+        color:rgb(182, 42, 88);
+        font-size: 130%;
+        font-style: italic;
+        
+    }
+
     .contactoInfo{
         display: flex;
         flex-direction: row-reverse;
@@ -145,7 +161,6 @@ body
         color:rgb(182, 42, 88);
         font-size: 130%;
         font-style: italic;
-        line-height: 90px;
 
     }
     .contenedorForm{
