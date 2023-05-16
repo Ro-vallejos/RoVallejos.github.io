@@ -1,148 +1,246 @@
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 body
 {
         background-color: rgb(253, 242, 225);
-        font-family:"Roboto", Sans-serif;
-        font-size: 12px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 15px;
         margin: 0;
-        align-items: end;
 }     
 
         header{
                 
                 background-color: rgb(241, 194, 202);
-                height: 60px;
-                padding: 30px;
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                justify-content: space-between;
+                height: 100px;
+                padding: 17px;
 
         }
         .nave{
-                
-                height: 120px;
-                margin-top: 10px;
+                width: 30%;
+                height: 109px;
+                max-height: 100%;
                 display: flex;
-                justify-content: center;
-                
-                flex-grow: 10;
+                align-items: center;
+                flex-grow: 10%;
         }
-        .nav{
-                display:flex;
-                align-items: end;
-                
-         }
                 #cabecera{
-                        align-items: center;
+
+                        height: 125px;
                         display: flex;
-                        height: 50px;
+                        align-items: center;
                         justify-content: space-between;
 
                 }
-                #navegador{
-                        
+                .espacioLogo{
+                        width: 365px;
+                        height: 110px;
+                        margin: 0px 0px;
+                }
+                .logo{
                         display: flex;
-                        justify-content: center;
-                        padding: 0px 0px;
+                        width: 370px;
                         margin: 0px;
-                        position: relative;
+                }
+                #navegador{
+                        display: flex;
                 }
                 #navegador div{
-                        background-color: rgb(250, 232, 232);
-                        line-height: 40px;
-                        font-size: 150%;
+                        font-size: 190%;
                         padding: 0px 20px;
-                        margin-top: 20px;
-                        
+                        display: flex;
                 }
+                
                 #regist{
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
+                        height: 60px;
                 }
                 #regist a{
                         
-                        font-size: 100%;
+                        font-size: 150%;
                         padding: 0px 5px;
                         text-decoration: none;
                         
                 }
-        main{
-                background-color:white ;
-                display: block;
-        }
-
-        section{
+                .seleccion{ 
+                    border-bottom:3px solid rgb(224, 129, 113);
+                }
+        .contenedor{
                 background-color: rgb(253, 242, 225); 
                 font-family:"Roboto", Sans-serif;
                 display: flex;
                 justify-content:center;
                 flex-wrap: wrap;
+                padding: 80px;
         }
-a{
-        
-        color:black;
-        text-decoration: none;
-}        
-
-img{
-        width: 190%;
-        margin-top: 50px;
- }
-        .espacioLogo{
-                
-                width: 390px;
-                height: 125px;
-                margin: 0px 0px;
+        .container{
+                padding: 9px;
         }
-        .logo{
+         .container img{
+                margin: 0px;
+                padding: 20px;
+        } 
+        p{
+                text-align: center;
+        }
+        h3{
+                text-align: center;
+        }
+        #pic{
+                width: 100%;
+        }
+        .hh{
+                background-color: rgb(228, 172, 127,0.4);
                 display: flex;
-                width: 370px;
-                margin: 15px;
-        }
-        .flex-container img{
-                background-color:black;
-                display: flex;
-                width: 330px;
+                flex-direction: column;
                 padding: 0px 0px;
         }
+        .prueba2{
+                width: 300px;
+        }
+        .vacio{
+                height: 50px;
+        }
+
+
+
+
+        a{
+                color:black;
+                text-decoration: none;
+        }        
+
+        img{
+                width: 190%;
+                margin-top: 50px;
+        }
+        
+     .formulario{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: italic;
+        margin: 150px;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+     }
+     li{
+        line-height: 1px;
+     }
+     ul {
+        list-style: none;
+     }
+    .contactoInfo{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50%;
+        align-items: right;
+        justify-content: space-around;
+        border-right: 2px solid rgb(173, 75, 88);
+    }
+    .contactoLink{
+        color:rgb(182, 42, 88);
+        font-size: 130%;
+        font-style: italic;
+        line-height: 90px;
+
+    }
+    .contenedorForm{
+        padding-left: 80px;
+        font-size: 17px;
+        width: 40%;
+    }
+    input{
+        background-color: blanchedalmond;
+        border: 1px solid rgb(192, 167, 128);
+        width:70%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        height: fit-content;
+    }
+    textarea{
+        background-color: blanchedalmond;
+        border: 1px solid rgb(192, 167, 128);
+    }
+    button{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        background-color: rgb(253, 242, 225);
+        border: 1px solid rgb(192, 167, 128); 
+        padding: 10px 22px;
+    }
+     .icono{
+        width: 8%;
+
+     }
+     .fut{
+        background-color: rgb(241, 194, 202);
+        height: 130px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: auto;
+        bottom: 0px;
+
+     }
+     .redes{
+        height: 130px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+     h1{
+        margin: 3px;
+        align-self: self-start;
+     }
+     .redes div{
+        padding: 0px 0px;
+        margin-right: 20px;
+        height: 100px;
+     }
+     .contactoLink img{
+        margin: 0px;
+        margin-left:130px ;
+        width: 20px;
+     }
+     .envios{
+        display: flex;
+        align-items: center;
+        width: 880px;
+        height: 100%;
+        padding-left:20px;
+        justify-content: start;
+     }
+     .pagar img{
+        align-content: center;
+        text-align: start;
+     }
+     .pagar{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding-right: 70px;
+        height: 80px;
+        padding-left: 70px;
+        border-left: 2px solid rgb(230, 140, 140);
+     }
+     .pagar i{
+        font-size: 28px;
+        padding: 0px 16px;
+        text-align: justify;
+     }
+
 
         @media only screen and (max-width: 930px) {
-                .nav div {
-                        
-                        flex-direction: column;
-                }
-                .nav{
-                        width: 210px;
-                        height: 150px;
-                        margin-top: -30px;
-                }
-                #navegador div{
-                        margin: 0% 0%;
-                        height: 100%;
+                
+                 #navegador div{
                         font-size: 90%;
-                        
                 }
-                .nave{
-                  justify-content: center;
-                  flex-wrap: wrap;
-                       
-                }
-                #regist{
-                        font-size: 80%; 
-                        display: flex;
-                        justify-content: flex-end;
-                }
-                .espacioLogo{
-                        width: 330px;
-                        margin-top: 10%;
-                        display: flex;
-                        align-items: flex-end;
-                }
-                .logo{
-                        margin: 0px 0px;
-                        width: 100%;
-                }
+
               }
 
