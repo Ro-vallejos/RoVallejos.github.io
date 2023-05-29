@@ -90,8 +90,28 @@ body
         h3{
                 text-align: center;
         }
+        .sCarr{
+                height: 500px;
+        }
+        .carrousel{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 400px;
+        }
+        .boxButton{
+                width: 100px;
+                height: 100px;
+        }
+        .siguiente{
+                border-radius: 100%;
+        }
+        .boxBanner{
+                width: 70%;
+        }
         #pic{
                 width: 100%;
+                margin: 0px 0px;
         }
         .hh{
                 background-color: rgb(228, 172, 127,0.4);
@@ -126,6 +146,9 @@ body
         width: 75%;
         display: flex;
         justify-content: center;
+     }
+     button{
+        cursor: pointer;
      }
      li{
         line-height: 1px;
