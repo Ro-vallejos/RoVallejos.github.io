@@ -22,3 +22,34 @@ function siguiente(){
       }
       mostrar();
 }
+//validar formulario
+
+var nombre=document.getElementById('nombre');
+var email=document.getElementById('email');
+var mensajes=document.getElementById('mensajes');
+
+
+
+function validar(){
+
+  var mensajesError= [];
+
+    if(nombre.value==='' || nombre.value===null){
+        nombre.focus();
+        mensajesError.push("Ingrese un nombre");
+    }
+
+    if(email.value==='' || email.value===null){
+      email.focus();
+      mensajesError.push("Ingrese un email");
+    }
+
+    /*if(!email.includes("@"))
+    {
+      mensajesError.push("Ingrese un email válido");
+    }*/
+
+    mensajes.innerHTML = mensajesError.join(', ');
+
+    return false;
+}

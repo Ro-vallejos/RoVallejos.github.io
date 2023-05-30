@@ -219,7 +219,7 @@ body
         height: 130px;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin-top: auto;
         bottom: 0px;
 
@@ -227,6 +227,7 @@ body
      .redes{
         height: 130px;
         margin-top: 0px;
+        margin-right: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -248,7 +249,7 @@ body
      .envios{
         display: flex;
         align-items: center;
-        width: 880px;
+        width: 980px;
         height: 100%;
         padding-left:20px;
         justify-content: start;
@@ -264,13 +265,18 @@ body
         align-items: center;
         padding-right: 70px;
         height: 80px;
-        padding-left: 70px;
+        width: 400px;
+        
+        padding-left: 100px;
         border-left: 2px solid rgb(230, 140, 140);
+     }
+     .fa-truck{
+        padding-left: 40px;    
      }
      .pagar i{
         font-size: 28px;
-        padding: 0px 16px;
-        text-align: justify;
+        padding: 0px 0px;
+        text-align:justify;
      }
 
 
