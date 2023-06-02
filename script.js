@@ -1,55 +1,104 @@
-let slide= [
-  {
-    imagen:"img/banner1.png",
-    linkImagen:"contacto.html",
-  },
-  {
-    imagen:"img/banner2.png",
-    linkImagen:"index.html",
-  }
-];
-let pos=0;
-mostrar();
-function mostrar(){
-    document.getElementById("pic").src = slide[pos].imagen;
-    document.getElementById("linkImg").href=slide[pos].linkImagen;
-}
-function siguiente(){
-    if (pos < slide.length - 1) {
-        pos++;
-      } else {
-        pos = 0;
-      }
-      mostrar();
-}
+
 //validar formulario
 
-var nombre=document.getElementById('nombre');
-var email=document.getElementById('email');
-var mensajes=document.getElementById('mensajes');
-
-
-
 function validar(){
+  var nombre=document.getElementById('nombre');
+  var email=document.getElementById('email');
+  var mensaje=document.getElementById('mensaje');
+  var telefono=document.getElementById('telefono');
+  var errorNombre = document.getElementById("errorNombre");
+  var errorMail=document.getElementById("errorMail");
+  var errorMensaje=document.getElementById("errorMensaje");
+  var errores=0;
 
-  var mensajesError= [];
+  var verifMail=/([-\w-\.])+@+([a-z-0-9]+\.)+(\w{2,8})/i;
+  var correcto= [];
 
-    if(nombre.value==='' || nombre.value===null){
+    
+  //nombre
+    if(nombre.value===''){
         nombre.focus();
-        mensajesError.push("Ingrese un nombre");
+        errorNombre.innerHTML = "Ingrese un nombre";
+        document.querySelector("#nombre").style.border="2px solid red";
+        errores++;
+    }else{
+        if(nombre.value.length>20){
+          nombre.focus();
+          errorNombre.innerHTML = "Máximo de caracteres permitidos:20";
+          document.querySelector("#nombre").style.border="2px solid red";
+          errores++;
+        }
+      errorNombre.innerHTML = "";
+      document.querySelector("#nombre").style.border="1px solid rgb(192, 167, 128)";
+      correcto.push("NOMBRE: "+nombre.value);
     }
 
-    if(email.value==='' || email.value===null){
+    //mail
+    if(email.value===''){
       email.focus();
-      mensajesError.push("Ingrese un email");
+      errorMail.innerHTML = "Ingrese un email";
+      document.querySelector("#email").style.border="2px solid red";
+      errores++;
+    }else{
+      if(!verifMail.test(email.value))
+      { 
+        email.focus();
+        errorMail.innerHTML ="Ingrese un email válido";
+        document.querySelector("#email").style.border="2px solid red";
+        errores++;
+      }else{
+        errorMail.innerHTML = "";
+        document.querySelector("#email").style.border="1px solid rgb(192, 167, 128)";
+        correcto.push("EMAIL: "+email.value);
+      } 
     }
 
-    /*if(!email.includes("@"))
+    //telefono
+    if(telefono.value!="")
     {
-      mensajesError.push("Ingrese un email válido");
-    }*/
+      correcto.push("TELEFONO: "+telefono.value);
+    }
 
-    mensajes.innerHTML = mensajesError.join(', ');
+    //mensaje
+    if(mensaje.value===''){
+      mensaje.focus();
+      errorMensaje.innerHTML = "Ingrese el mensaje";
+      document.querySelector("#mensaje").style.border="2px solid red";
+      errores++;
+    }else{
+      if(mensaje.value.length > 400){
+        
+        mensaje.focus();
+        errorMensaje.innerHTML = "maximo permitido: 400";
+        document.querySelector("#mensaje").style.border="2px solid red";
+        errores++;
+      }else{
+        errorMensaje.innerHTML = "";
+        document.querySelector("#mensaje").style.border="1px solid rgb(192, 167, 128)";
+        correcto.push("MENSAJE: "+mensaje.value);
+      }
+    }
+    //reset formulario
+    if(errores==0)
+    {
+      document.getElementById('form').reset();
+      
+      mostrarcorrecto(correcto);
+    }
 
     return false;
 }
+
+function mostrarcorrecto(correcto){
+  
+  var contenido = document.querySelector("#mostrarForm");
+
+  for (let i = 0; i < correcto.length; i++) {
+    var li= document.createElement("li"); 
+    li.textContent= correcto[i];
+    contenido.appendChild(li);
+  }
+
+}
+
+
